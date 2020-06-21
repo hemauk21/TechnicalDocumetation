@@ -1,0 +1,37 @@
+.vertical-menu {
+  width: 200px;
+  height:100%;
+  background-color: #eee;
+}
+ul {
+  /* To remove default bullet points in list */
+  list-style-type: none;
+  /* To remove default spacing from margin left in list*/
+  padding-inline-start: 0px;
+}
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  /* To remove underline in links */
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;  
+}
+.vertical-menu a:hover{
+    background-color: #ccc;
+}
+.vertical-menu a.highlight-cls{
+    background-color:darkgray;
+   }
+ #main-header{
+    padding-top:5px;
+    text-align: center;
+}
+#navbar {
+  background-color: #eee;
+ 
+}
+#section-div{
+    display: none;
+}
