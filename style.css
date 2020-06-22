@@ -1,7 +1,17 @@
+body{
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+#navbar {
+  background-color: #eee;
+}
 .vertical-menu {
   width: 200px;
-  height:100%;
+  height: 100%;
+  /* To fill remaining white space with same color */
   background-color: #eee;
+  border-right:0.5px solid;
+  border-color: rgba(0, 22, 22, 0.4);
 }
 ul {
   /* To remove default bullet points in list */
@@ -9,29 +19,24 @@ ul {
   /* To remove default spacing from margin left in list*/
   padding-inline-start: 0px;
 }
+
 .vertical-menu a {
-  background-color: #eee;
   color: black;
   display: block;
   /* To remove underline in links */
   text-decoration: none;
   padding: 10px;
-  text-align: center;  
+  text-align: center;
 }
-.vertical-menu a:hover{
-    background-color: #ccc;
+.vertical-menu a:hover {
+  background-color: #ccc;
 }
-.vertical-menu a.highlight-cls{
-    background-color:darkgray;
-   }
- #main-header{
-    padding-top:5px;
-    text-align: center;
+/* To get the introduction html5 highlighted all the time */
+.vertical-menu a.highlight-cls {
+  background-color: darkgray;
 }
-#navbar {
-  background-color: #eee;
- 
+#main-header {
+  padding-top: 5px;
+  text-align: center;
 }
-#section-div{
-    display: none;
-}
+
