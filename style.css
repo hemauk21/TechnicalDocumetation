@@ -1,4 +1,4 @@
-body{
+body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.5;
 }
@@ -6,12 +6,24 @@ body{
   background-color: #eee;
 }
 .vertical-menu {
-  width: 200px;
+  /* Full-height */
   height: 100%;
+  width: 200px;
   /* To fill remaining white space with same color */
   background-color: #eee;
-  border-right:0.5px solid;
+  border-right: 0.5px solid;
   border-color: rgba(0, 22, 22, 0.4);
+  /* Fixed Sidebar (stay in place on scroll) */
+  position: fixed;
+  z-index: 1;
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+#page-Content {
+  /* Same as the width of the vertical menu bar */
+  margin-left: 200px;
 }
 ul {
   /* To remove default bullet points in list */
@@ -39,4 +51,16 @@ ul {
   padding-top: 5px;
   text-align: center;
 }
-
+#grid-Container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.version-Grid {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-row-gap: 5px;
+  /* To fill column wise for commented ul list in index.html */
+  /* grid-auto-flow: column;
+grid-template-rows: auto auto auto auto;
+grid-template-columns: auto auto ; */
+}
