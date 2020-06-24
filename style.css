@@ -3,27 +3,22 @@ body {
   line-height: 1.5;
 }
 
-#grid-Container {
-  display: grid;
-  grid-template-columns: 1fr auto;
-}
-/* Title for the vertical menu */
-#main-header {
-  padding-top: 20px;
-  text-align: center;
+span {
+  /* To change cursor into hand symbol */
+  cursor: pointer;
+  color: darkslategray;
+  font-size: 50px;
 }
 
 #navbar {
   background-color: #eee;
 }
-
-/* To push the page content to the right when you open the side navigation */
+/* To want to push the page content to the right when you open the side navigation */
 #page-Content {
   /* Same as the width of the vertical menu bar */
   margin-left: 200px;
   padding: 10px;
 }
-
 .vertical-menu {
   /* Full-height */
   height: 100%;
@@ -46,7 +41,6 @@ ul {
   /* To remove default spacing from margin left in list*/
   padding-inline-start: 0px;
 }
-
 /* side vertical menu links */
 .vertical-menu a {
   color: black;
@@ -56,7 +50,6 @@ ul {
   padding: 10px;
   text-align: center;
 }
-
 /* When you mouse over the navigation links, change their color */
 .vertical-menu a:hover {
   background-color: #ccc;
@@ -64,6 +57,15 @@ ul {
 /* To get the introduction html5 highlighted all the time */
 .vertical-menu a.highlight-cls {
   background-color: darkgray;
+}
+
+#main-header {
+  padding-top: 5px;
+  text-align: center;
+}
+#grid-Container {
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 .version-Grid {
   display: grid;
@@ -79,6 +81,7 @@ grid-template-columns: auto auto ; */
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
   .vertical-menu {
+    /* Full-height */
     height: auto;
   }
 }

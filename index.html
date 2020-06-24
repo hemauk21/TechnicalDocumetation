@@ -10,25 +10,34 @@
 </head>
 
 <body>
+
     <div id="grid-Container">
+        <span id="openBtnId" onclick="openNav()">&#926;</span>
         <div id="vertical-div" class="vertical-menu">
             <nav id="navbar">
+
                 <div id="links-div">
+                    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()"></a>
                     <header id="main-header">
                         <h1>HTML Basics</h1>
                     </header>
                     <ul>
-                        <li><a class="nav-link highlight-cls" href="#Html_Introduction">HTML Introduction</a></li>
-                        <li><a class="nav-link" href="#Html_Versions_Timeline">HTML versions Timeline</a></li>
-                        <li><a class="nav-link" href="#Document_Type_Declaration">Document Type Declaration</a></li>
-                        <li><a class="nav-link" href="#Markup">Markup</a></li>
-                        <li><a class="nav-link" href="#Html_Elements">HTML Elements</a></li>
+                        <li><a class="nav-link highlight-cls" onclick="closeNav()" href="#Html_Introduction">HTML
+                                Introduction</a></li>
+                        <li><a class="nav-link" onclick="closeNav()" href="#Html_Versions_Timeline">HTML versions
+                                Timeline</a></li>
+                        <li><a class="nav-link" onclick="closeNav()" href="#Document_Type_Declaration">Document Type
+                                Declaration</a></li>
+                        <li><a class="nav-link" onclick="closeNav()" href="#Markup">Markup</a></li>
+                        <li><a class="nav-link" onclick="closeNav()" href="#Html_Elements">HTML Elements</a></li>
                     </ul>
                 </div>
+
             </nav>
         </div>
         <main id="main-doc">
             <div id="page-Content">
+
                 <section id="Html_Introduction" class="main-section">
                     <header>
                         <h1>HTML Introduction</h1>
@@ -126,7 +135,7 @@
                         <p>
                             HTML markup consists of several key components, including those called tags
                             (and their attributes), character-based data types, character references and
-                            entity references. HTML tags most commonly come in pairs like &#60;h1&#62;and &#60;/h1&#62;,
+                            entity references. HTML tags most commonly come in pairs like lt h1 gt and lt /h1 gt,
                             although some represent empty elements and so are unpaired, for example lt img gt.
                             The first tag in such a pair is the start tag, and the second is the end tag
                             (they are also called opening tags and closing tags).
@@ -200,7 +209,28 @@
             </div>
         </main>
     </div>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+    <script>
+
+        function openNav() {
+            document.getElementById("vertical-div").style.width = "200px";
+            document.getElementById("page-Content").style.marginLeft = "200px";
+
+        }
+        function closeNav() {
+            // Check screen width and if width is greater than 700 won't execute remaining code
+            if (window.innerWidth > 700) {
+                return;
+            }
+            document.getElementById("vertical-div").style.width = "0";
+            document.getElementById("page-Content").style.marginLeft = "0";
+            document.getElementById("openBtnId").style.display = "inline";
+        }
+        // For hiding vertical menu bar on page loading for mobile
+        closeNav();
+    </script>
+
 </body>
 
 </html>
