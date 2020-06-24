@@ -3,20 +3,27 @@ body {
   line-height: 1.5;
 }
 
-span {
-  color: darkslategray;
-  font-size: 50px;
+#grid-Container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+/* Title for the vertical menu */
+#main-header {
+  padding-top: 20px;
+  text-align: center;
 }
 
 #navbar {
   background-color: #eee;
 }
-/* To want to push the page content to the right when you open the side navigation */
+
+/* To push the page content to the right when you open the side navigation */
 #page-Content {
   /* Same as the width of the vertical menu bar */
   margin-left: 200px;
   padding: 10px;
 }
+
 .vertical-menu {
   /* Full-height */
   height: 100%;
@@ -39,6 +46,7 @@ ul {
   /* To remove default spacing from margin left in list*/
   padding-inline-start: 0px;
 }
+
 /* side vertical menu links */
 .vertical-menu a {
   color: black;
@@ -48,6 +56,7 @@ ul {
   padding: 10px;
   text-align: center;
 }
+
 /* When you mouse over the navigation links, change their color */
 .vertical-menu a:hover {
   background-color: #ccc;
@@ -55,15 +64,6 @@ ul {
 /* To get the introduction html5 highlighted all the time */
 .vertical-menu a.highlight-cls {
   background-color: darkgray;
-}
-
-#main-header {
-  padding-top: 5px;
-  text-align: center;
-}
-#grid-Container {
-  display: grid;
-  grid-template-columns: 1fr auto;
 }
 .version-Grid {
   display: grid;
@@ -74,22 +74,11 @@ ul {
 grid-template-rows: auto auto auto auto;
 grid-template-columns: auto auto ; */
 }
-/* media query for laptop */
-
-@media only screen and (min-width: 1030px) and (max-width: 1366px) {
-  span {
-    display: none;
-  }
-}
 
 /* media query for mobiles */
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
-  /* Position and style the close button (top right corner) */
-  .vertical-menu .closeBtn {
-    position: absolute; /* element is positioned absolutely to its first positioned parent */
-    top: 0;
-    right: 25px;
-    margin-left: 50px;
+  .vertical-menu {
+    height: auto;
   }
 }
