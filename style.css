@@ -1,0 +1,87 @@
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+span {
+  /* To change cursor into hand symbol */
+  cursor: pointer;
+  color: darkslategray;
+  font-size: 50px;
+}
+
+#navbar {
+  background-color: #eee;
+}
+/* To want to push the page content to the right when you open the side navigation */
+#page-Content {
+  /* Same as the width of the vertical menu bar */
+  margin-left: 200px;
+  padding: 10px;
+}
+.vertical-menu {
+  /* Full-height */
+  height: 100%;
+  width: 200px;
+  /* To fill remaining white space with same color */
+  background-color: #eee;
+  border-right: 0.5px solid;
+  border-color: rgba(0, 22, 22, 0.4);
+  /* Fixed Sidebar (stay in place on scroll) */
+  position: fixed;
+  z-index: 1;
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+ul {
+  /* To remove default bullet points in list */
+  list-style-type: none;
+  /* To remove default spacing from margin left in list*/
+  padding-inline-start: 0px;
+}
+/* side vertical menu links */
+.vertical-menu a {
+  color: black;
+  display: block;
+  /* To remove underline in links */
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+}
+/* When you mouse over the navigation links, change their color */
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+/* To get the introduction html5 highlighted all the time */
+.vertical-menu a.highlight-cls {
+  background-color: darkgray;
+}
+
+#main-header {
+  padding-top: 5px;
+  text-align: center;
+}
+#grid-Container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.version-Grid {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-row-gap: 5px;
+  /* To fill column wise for commented ul list in index.html */
+  /* grid-auto-flow: column;
+grid-template-rows: auto auto auto auto;
+grid-template-columns: auto auto ; */
+}
+
+/* media query for mobiles */
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+  .vertical-menu {
+    /* Full-height */
+    height: auto;
+  }
+}

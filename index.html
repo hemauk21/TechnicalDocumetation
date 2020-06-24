@@ -1,46 +1,236 @@
 <html lang="en">
-   
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-                Html5 Technical Documentation
-        </title>
-    </head>
-    <body>
-        <div id="main-doc">
-            <section id="Html5_Introduction" class="main-section">
-                <header>
-                    <h1>Html5 Introduction</h1>
-                </header>
 
-            </section>
-            <section id="HTML5_nav_Tag" class="main-section">
-                <header>
-                    <h1>HTML5 nav Tag</h1>
-                </header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>
+        HTML Technical Documentation
+    </title>
+</head>
 
-            </section>
-            <section id="HTML5_hgroup_Tag" class="main-section">
-                <header>
-                    <h1>HTML5 hgroup Tag</h1>
-                </header>
+<body>
 
-            </section>
-            <section id="HTML5_figcaption_Tag" class="main-section">
-                <header>
-                    <h1>HTML5 figcaption Tag</h1>
-                </header>
+    <div id="grid-Container">
+        <span id="openBtnId" onclick="openNav()">&#926;</span>
+        <div id="vertical-div" class="vertical-menu">
+            <nav id="navbar">
 
-            </section>
-            <section id="HTML5_time_Tag" class="main-section">
-                <header>
-                    <h1>HTML5 time Tag</h1>
-                </header>
+                <div id="links-div">
+                    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()"></a>
+                    <header id="main-header">
+                        <h1>HTML Basics</h1>
+                    </header>
+                    <ul>
+                        <li><a class="nav-link highlight-cls" onclick="closeNav()" href="#Html_Introduction">HTML
+                                Introduction</a></li>
+                        <li><a class="nav-link" onclick="closeNav()" href="#Html_Versions_Timeline">HTML versions
+                                Timeline</a></li>
+                        <li><a class="nav-link" onclick="closeNav()" href="#Document_Type_Declaration">Document Type
+                                Declaration</a></li>
+                        <li><a class="nav-link" onclick="closeNav()" href="#Markup">Markup</a></li>
+                        <li><a class="nav-link" onclick="closeNav()" href="#Html_Elements">HTML Elements</a></li>
+                    </ul>
+                </div>
 
-            </section>
-
+            </nav>
         </div>
-        
-    </body>
+        <main id="main-doc">
+            <div id="page-Content">
+
+                <section id="Html_Introduction" class="main-section">
+                    <header>
+                        <h1>HTML Introduction</h1>
+                    </header>
+                    <article>
+                        <p>
+                            <strong> Hypertext Markup Language (HTML)</strong> is the standard markup language for
+                            documents
+                            designed to be displayed in a web browser. It can be assisted by technologies
+                            such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+                        </p>
+                        <p>
+                            Web browsers receive HTML documents from a web server or from local storage
+                            and render the documents into multimedia web pages. HTML describes the structure of a
+                            web page semantically and originally included cues for the appearance of the document.
+                        </p>
+                        <p>
+                            HTML can embed programs written in a scripting language such as JavaScript,
+                            which affects the behavior and content of web pages. Inclusion of CSS defines
+                            the look and layout of content. The World Wide Web Consortium (W3C), former
+                            maintainer of the HTML and current maintainer of the CSS standards, has encouraged
+                            the use of CSS over explicit presentational HTML since 1997.
+                        </p>
+                    </article>
+                </section>
+
+                <section id="Html_Versions_Timeline" class="main-section">
+                    <header>
+                        <h1>HTML versions Timeline</h1>
+                    </header>
+                    <article>
+                        <ul class="version-Grid">
+                            <li>HTML2</li>
+                            <li>November 24, 1995</li>
+                            <li>HTML3</li>
+                            <li>January 14, 1997</li>
+                            <li>HTML4</li>
+                            <li>December 24, 1999</li>
+                            <li>HTML5</li>
+                            <li>December 14, 2017</li>
+                        </ul>
+
+                        <!-- <ul class="version-Grid">
+                        <li>HTML2</li>
+                        <li>HTML3</li>
+                        <li>HTML4</li>
+                        <li>HTML5</li>
+                        <li>November 24, 1995</li>                       
+                        <li>January 14, 1997</li>                       
+                        <li>December 24, 1999</li>                      
+                        <li>December 14, 2017</li>
+                    </ul> -->
+                    </article>
+                </section>
+
+                <section id="Document_Type_Declaration" class="main-section">
+                    <header>
+                        <h1>Document Type Declaration</h1>
+                    </header>
+                    <article>
+                        <p>
+                            HTML documents are required to start with a Document Type Declaration (informally, a
+                            "doctype").
+                            In browsers, the doctype helps to define the rendering mode—particularly whether to use
+                            quirks
+                            mode.
+                        </p>
+                        <p>
+                            The original purpose of the doctype was to enable parsing and validation of HTML documents
+                            by
+                            SGML
+                            tools based on the Document Type Definition (DTD). The DTD to which the DOCTYPE refers
+                            contains
+                            a
+                            machine-readable grammar specifying the permitted and prohibited content for a document
+                            conforming
+                            to such a DTD.Browsers,on the other hand, do not implement HTML as an application of SGML
+                            and by
+                            consequence do not read the DTD.
+                        </p>
+                        <p>HTML5 does not define a DTD; therefore, in HTML5 the doctype declaration is simpler and
+                            shorter:
+                        </p>
+                        <code>
+                      <!-- browser support for entity numbers is good than entity names -->
+                    &#60;!DOCTYPE html&#62;
+                </code>
+                    </article>
+                </section>
+                <section id="Markup" class="main-section">
+                    <header>
+                        <h1>Markup</h1>
+                    </header>
+                    <article>
+                        <p>
+                            HTML markup consists of several key components, including those called tags
+                            (and their attributes), character-based data types, character references and
+                            entity references. HTML tags most commonly come in pairs like lt h1 gt and lt /h1 gt,
+                            although some represent empty elements and so are unpaired, for example lt img gt.
+                            The first tag in such a pair is the start tag, and the second is the end tag
+                            (they are also called opening tags and closing tags).
+                        </p>
+                        <p>
+                            Another important component
+                            is the HTML document type declaration, which triggers standards mode rendering.</p>
+                        <p>
+                            The following is an example of the classic "Hello, World!" program:
+                        </p>
+                        <pre>
+                <code>
+                    &#60;!DOCTYPE html&#62;
+                    &#60;html&#62;
+                      &#60;head&#62;
+                        &#60;title&#62;This is a title&#60;/title&#62;
+                      &#60;/head&#62;
+                      &#60;body&#62;
+                        &#60;p&#62;Hello world!&#60;/p&#62;
+                      &#60;/body&#62;
+                    &#60;/html&#62;                  
+                </code>
+            </pre>
+                    </article>
+                </section>
+                <section id="Html_Elements" class="main-section">
+                    <header>
+                        <h1>HTML Elements</h1>
+                    </header>
+                    <article>
+                        <p>
+                            HTML documents imply a structure of nested HTML elements. These are indicated in the
+                            document by HTML tags, enclosed in angle brackets.Tags may also enclose further
+                            tag markup between the start and end, including a mixture of tags and text.
+                            This indicates further (nested) elements, as children of the parent element.
+                        </p>
+                        <h4>Element examples</h4>
+                        <p>
+                            Header of the HTML document: &#60;head&#62;...&#60;/head&#62;. The title is included in the
+                            head,
+                            for example:
+                        </p>
+                        <pre>
+                <code>
+                    &#60;head&#62;
+                    &#60;title&#62;The Title&#60;/title&#62;
+                    &#60;/head&#62;
+                </code>
+            </pre>
+                        <p>Headings: HTML headings are defined with the &#60;h1&#62; to &#60;h6&#62; tags with
+                            H1 being the highest (or most important) level and H6 the least:</p>
+                        <pre>
+                        <code>
+                            &#60;h1&#62;Heading level 1&#60;/h1&#62;
+                            &#60;h2&#62;Heading level 2&#60;/h2&#62;
+                            &#60;h3&#62;Heading level 3&#60;/h3&#62;
+                            &#60;h4&#62;Heading level 4&#60;/h4&#62;
+                            &#60;h5&#62;Heading level 5&#60;/h5&#62;
+                            &#60;h6&#62;Heading level 6&#60;/h6&#62;
+                        </code>
+                    </pre>
+                        <h4>Paragraphs:</h4>
+                        <pre>
+                        <code>
+                            &#60;p&#62;Paragraph 1&#60;/p&#62; 
+                            &#60;p&#62;Paragraph 2&#60;/p&#62;
+                        </code>
+                    </pre>
+                    </article>
+                </section>
+            </div>
+        </main>
+    </div>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+    <script>
+
+        function openNav() {
+            document.getElementById("vertical-div").style.width = "200px";
+            document.getElementById("page-Content").style.marginLeft = "200px";
+
+        }
+        function closeNav() {
+            // Check screen width and if width is greater than 700 won't execute remaining code
+            if (window.innerWidth > 700) {
+                return;
+            }
+            document.getElementById("vertical-div").style.width = "0";
+            document.getElementById("page-Content").style.marginLeft = "0";
+            document.getElementById("openBtnId").style.display = "inline";
+        }
+        // For hiding vertical menu bar on page loading for mobile
+        closeNav();
+    </script>
+
+</body>
+
 </html>
